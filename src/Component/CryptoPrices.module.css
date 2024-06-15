@@ -1,0 +1,77 @@
+.coinName{
+  margin-top: 20px;
+  color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0 0 ;
+}
+  
+  .card {
+    background-color: #161f1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%;
+    }
+}
+
+
+.symbol{
+  height: 40px;
+  width: 40px;
+  background-color: #6c8a1a;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.symbolDiv{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.code{
+  color: #fff;
+  font-weight: 500;
+}
+
+.description{
+  color: #fff;
+  margin: 10px 0;
+}
+  
+.rateDiv{
+  display: flex;
+  justify-content: space-between;
+}
+
+.rateTag{
+ color: #7f8683;
+}
+
+.rate{
+  color: #fff;
+}
