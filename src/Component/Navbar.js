@@ -79,7 +79,7 @@ const Navbar = () => {
                 src={mobileMenuOpen ? crossIcon : hamburgerIcon}
                 alt="menuIcon"
                 className={style.menuIcon}
-                onClick={toggleMobileMenu}
+                onClick={toggleMobileMenu} 
               />
             </div>
           </div>
