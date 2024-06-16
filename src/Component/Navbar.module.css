@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
   overflow: hidden;
-  
 }
 
 .mainDiv {
@@ -119,14 +118,13 @@
 }
 
 @media (max-width: 1111px) {
-
   .container {
     display: flex;
     flex-direction: column;
     width: 100%;
     overflow: hidden;
   }
-  
+
   .mainDiv {
     display: none;
   }
@@ -134,7 +132,7 @@
   .mobileNav {
     width: 100%;
     display: flex;
-    padding: 10px ;
+    padding: 10px;
     background-color: #161f1c;
   }
 
@@ -146,9 +144,8 @@
     cursor: pointer;
   }
 
-  .mobileText{
+  .mobileText {
     color: #fff;
-
   }
 
   .menuIcon {
@@ -163,6 +160,15 @@
     background-color: #161f1c;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1.0s ease,  1.0s ease;
+  }
+
+  .dropdownMenu.open {
+    max-height: 300px; 
+    opacity: 1;
   }
 
   .menuItem {

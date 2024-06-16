@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const handleMenuItemClick = (menuItem) => {
     setSelectedMenuItem(menuItem);
-    setMobileMenuOpen(false); 
+    setMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -72,23 +72,28 @@ const Navbar = () => {
         </div>
       ) : (
         <div className={style.mobileNav}>
-          <div className={style.hamburger} onClick={toggleMobileMenu}>
+          <div className={style.hamburger}>
             <div className={style.mobileText}>Hello, User 👋</div>
-            <div><img src={mobileMenuOpen ? crossIcon : hamburgerIcon} alt="menuIcon" className={style.menuIcon} /></div>
-          </div>
-          {mobileMenuOpen && (
-            <div className={style.dropdownMenu}>
-              <div className={style.menuItem} onClick={() => handleMenuItemClick('Home')}>Home</div>
-              <div className={style.menuItem} onClick={() => handleMenuItemClick('Assets')}>Assets</div>
-              <div className={style.menuItem} onClick={() => handleMenuItemClick('Wallet')}>Wallet</div>
+            <div>
+              <img
+                src={mobileMenuOpen ? crossIcon : hamburgerIcon}
+                alt="menuIcon"
+                className={style.menuIcon}
+                onClick={toggleMobileMenu}
+              />
             </div>
-          )}
+          </div>
+          <div className={`${style.dropdownMenu} ${mobileMenuOpen ? style.open : ''}`}>
+            <div className={style.menuItem} onClick={() => handleMenuItemClick('Home')}>Home</div>
+            <div className={style.menuItem} onClick={() => handleMenuItemClick('Assets')}>Assets</div>
+            <div className={style.menuItem} onClick={() => handleMenuItemClick('Wallet')}>Wallet</div>
+          </div>
         </div>
       )}
       <div className={style.mainContent}>
         {selectedMenuItem === 'Home' && <Home />}
-        {selectedMenuItem === 'Assets' && <AnotherPage text="Assets Page will displayed here !"/>}
-        {selectedMenuItem === 'Wallet' && <AnotherPage text="Wallet Page will displayed here !"/>}
+        {selectedMenuItem === 'Assets' && <AnotherPage text="Assets Page will displayed here !" />}
+        {selectedMenuItem === 'Wallet' && <AnotherPage text="Wallet Page will displayed here !" />}
       </div>
     </div>
   );
