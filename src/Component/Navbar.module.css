@@ -155,7 +155,7 @@
 
   .dropdownMenu {
     position: absolute;
-    padding: 5px;
+    padding: 0 5px;
     top: 50px;
     right: 10px;
     background-color: #161f1c;
